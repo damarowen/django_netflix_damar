@@ -17,7 +17,7 @@ class CustomUser(AbstractUser):
 
 
 class Profile(models.Model):
-    name=models.CharField(max_length=225)
+    name=models.CharField(max_length=225,unique=True)
     age_limit=models.CharField(max_length=5,choices=AGE_CHOICES)
     uuid=models.UUIDField(default=uuid.uuid4,unique=True)
 

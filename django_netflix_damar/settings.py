@@ -38,6 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # from django auth library
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -141,6 +147,8 @@ STATICFILES_DIRS = [
 # Auth stting
 AUTH_USER_MODEL = 'netflix.CustomUser'
 
+
+# from django auth library
 AUTHENTICATION_BACKENDS = [
 
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -151,14 +159,12 @@ AUTHENTICATION_BACKENDS = [
 
 ]
 
+# from django auth library
 SITE_ID = 1
-
-
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_USERNAME_REQUIRED = False
-
 LOGIN_REDIRECT_URL = '/'
 
 
