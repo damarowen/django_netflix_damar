@@ -10,3 +10,7 @@ python manage.py makemigrations
 python manage.py migrate
 python3 manage.py runserver
 ```
+```
+crate admin
+python manage.py createsuperuser
+```
