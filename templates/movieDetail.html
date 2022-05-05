@@ -23,7 +23,7 @@
                     {% lorem 1 %}
                 </p>
                 <div class="flex my-4">
-                    <a href="{% url 'core:play' movie_id=movie.uuid %}">
+                    <a href="{% url 'netflix:play' movie_id=movie.uuid %}">
                     
                         <button class="flex items-center bg-white py-2 px-5 rounded-md" style='color:black;'>
                             <ion-icon name="play" class="text-2xl"></ion-icon>
@@ -47,7 +47,7 @@
                     </h2>
                     {% for episode in movie.videos.all %}
                         <h3 class='text-lg'>
-                            <a href="{% url 'core:play' movie_id=movie.uuid %}?epi={{forloop.counter0}}">
+                            <a href="{% url 'netflix:play' movie_id=movie.uuid %}?epi={{forloop.counter0}}">
                             
                             {{forloop.counter}} - {{episode.title}}
                             </a>

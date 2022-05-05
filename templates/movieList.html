@@ -23,7 +23,7 @@ Netflix
                     {% lorem 1 %}
                 </p>
                 <div class="flex my-4">
-                    <a href="{% url 'core:play' movie_id=show_case.uuid %}">
+                    <a href="{% url 'netflix:play' movie_id=show_case.uuid %}">
                     
                         <button class="flex items-center bg-white py-2 px-5 rounded-md" style='color:black;'>
                             <ion-icon name="play" class="text-2xl"></ion-icon>
@@ -33,7 +33,7 @@ Netflix
                         </button>
                     </a>
 
-                    <a href="{% url 'core:show_det' movie_id=show_case.uuid %}">
+                    <a href="{% url 'netflix:show_det' movie_id=show_case.uuid %}">
                         <button class="ml-4 text-white flex items-center bg-gray-500 bg-opacity-80 py-2 px-5 rounded-md">
                         
                             <ion-icon name="information-circle-outline" class="text-2xl" ></ion-icon>
@@ -55,7 +55,7 @@ Netflix
                 <div class="flex   items-center min-w-full  movie_lis">
                     {% for movie in movies %}
                     
-                        <a href="{% url 'core:show_det' movie_id=movie.uuid %}">
+                        <a href="{% url 'netflix:show_det' movie_id=movie.uuid %}">
                             <div class=" h-40 m-4  bg-blue-500 overflow-hidden flex-shrink-0 rounded-md cursor-pointer w-40">
                                 <img src="{{movie.flyer.url}}" class="w-full h-full " alt="">
                             </div>
